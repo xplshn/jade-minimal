@@ -24,8 +24,6 @@ pub fn install_base_packages(kernel: String) {
         kernel_to_install,
         format!("{kernel_to_install}-headers").as_str(),
         "linux-firmware",
-        "sudo",
-        "connman",
     ]);
     dinit_enable("connman");
     files::copy_file("/etc/pacman.conf", "/mnt/etc/pacman.conf");
